@@ -23,7 +23,7 @@ let database;
     console.error('❌ Connection failed:', error.message);
     await client.close();
     console.log('Connection closed.');
-    process.exit(1); // ❗ prevent app from running with no DB
+    process.exit(1); 
   }
 })();
 
