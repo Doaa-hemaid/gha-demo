@@ -2,10 +2,16 @@ name: Deployment
 on:
   push:
     branches:
-      - main
+      - master
       - dev
 jobs:
   test:
+    env:
+     MONGODB_DB_NAME: gha-demo
+     MONGODB_PASSWORD: Dpa5rPTrhNZU1Z5d 
+     MONGODB_USERNAME: doaahemaid01
+     MONGODB_CLUSTER_ADDRESS: cluster0.fpnz12r.mongodb.net
+     PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
     steps:
