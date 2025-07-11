@@ -10,8 +10,8 @@ env:
 jobs:
   test:
     env:
-     MONGODB_PASSWORD: g-9.UCfaa@F3nz7 
-     MONGODB_USERNAME: doaahemaid01
+     MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
+     MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
      MONGODB_CLUSTER_ADDRESS: cluster0.fpnz12r.mongodb.net
      PORT: 8080
     environment: testing
