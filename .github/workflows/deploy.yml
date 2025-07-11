@@ -4,10 +4,12 @@ on:
     branches:
       - master
       - dev
+env:
+   MONGODB_DB_NAME: gha-demo
+     
 jobs:
   test:
     env:
-     MONGODB_DB_NAME: gha-demo
      MONGODB_PASSWORD: g-9.UCfaa@F3nz7 
      MONGODB_USERNAME: doaahemaid01
      MONGODB_CLUSTER_ADDRESS: cluster0.fpnz12r.mongodb.net
@@ -36,4 +38,5 @@ jobs:
     steps:
       - name: Output information
         run: |        
-          echo "..."
+          echo "Mongo-db:${{env.MONGODB_USERNAME}}"
+          echo "Mongo-db:${{env.MONGODB_DB_NAME}}" 
